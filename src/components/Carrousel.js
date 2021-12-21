@@ -64,25 +64,25 @@ const Carrousel = () => {
         </div>
             <div>
                 <OwlCarousel className='owl-theme' autoplay={true} nav={true} items={7} loop margin={30} nav>
-                    <div class='item'>
+                    <div className='item'>
                         <img className="w-100 pb-3" src={mr1}/>
                     </div>
-                    <div class='item'>
+                    <div className='item'>
                         <img className="w-100 pb-3" src={mr2}/>
                     </div>
-                    <div class='item'>
+                    <div className='item'>
                         <img className="w-100 pb-3" src={mr3}/>
                     </div>
-                    <div class='item'>
+                    <div className='item'>
                         <img className="w-100 pb-3" src={mr4}/>
                     </div>
-                    <div class='item'>
+                    <div className='item'>
                         <img className="w-100 pb-3" src={mr5}/>
                     </div>
-                    <div class='item'>
+                    <div className='item'>
                         <img className="w-100 pb-3" src={mr6}/>
                     </div>
-                    <div class='item'>
+                    <div className='item'>
                         <img className="w-100 pb-3" src={mr7}/>
                     </div>
                     <div className='item'>

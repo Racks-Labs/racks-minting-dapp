@@ -2,7 +2,7 @@ import React from "react";
 
 const Accordion = () => {
     return (
-        <div className="pt-10 mt-5 pb-10">
+        <div className="pt-10 mt-5 ">
             <div className="container  ">
                 <div className="row pt-5">
                     <div className="col-12 col-lg-6">

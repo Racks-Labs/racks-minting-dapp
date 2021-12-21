@@ -8,6 +8,7 @@ import ConfigNft from "./components/ConfigNft";
 import Exclusives from "./components/Exclisives";
 import Museum from "./components/Museum";
 import Accordion from "./components/Accordion";
+import Footer from './components/Footer.js'
 
 
 function App() {
@@ -182,6 +183,7 @@ function App() {
       <Exclusives></Exclusives>
       <Museum></Museum>
       <Accordion></Accordion>
+      <Footer></Footer>
     </div>
   );
 }
