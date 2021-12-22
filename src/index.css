@@ -214,7 +214,19 @@ p span {
   height: 100%;
   background-repeat: no-repeat;
 }
-
+.borderCircle {
+  border-radius: 100%;
+  border: solid 1px;
+  height: 4rem;
+  width: 4rem;
+  cursor: pointer;
+  position: absolute;
+  padding: 17px;
+}
+.navbar-expand-lg .navbar-collapse {
+  right: 0!important;
+  flex: revert!important;
+}
 @media(max-width: 670px) {
   .row {
     margin: 0px;
