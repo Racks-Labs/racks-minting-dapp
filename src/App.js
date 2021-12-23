@@ -9,7 +9,6 @@ import Exclusives from "./components/Exclisives";
 import Museum from "./components/Museum";
 import Accordion from "./components/Accordion";
 
-
 function App() {
   const [wallet, setWallet] = useState(null);
   const [chain, setChain] = useState("");
@@ -175,13 +174,13 @@ function App() {
   }, [wallet, chain]);
   return (
     <div className="App">
-      <Header></Header>
-      <Banner></Banner>
-      <Carrousel></Carrousel>
-      <ConfigNft></ConfigNft>
-      <Exclusives></Exclusives>
-      <Museum></Museum>
-      <Accordion></Accordion>
+      <Header />
+      <Banner />
+      <Carrousel />
+      <ConfigNft />
+      <Exclusives />
+      <Museum />
+      <Accordion />
     </div>
   );
 }
