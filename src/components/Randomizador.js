@@ -3,6 +3,7 @@ import logo from "../assets/images/logo.png";
 import mr3 from "../assets/images/3.png";
 
 const Randomizador = () => {
+  //random variables
   const [loading, setLoading] = useState(false);
   const [bg, setBg] = useState(2); //max 7
   const [clothe, setClothe] = useState(2); //max 14
