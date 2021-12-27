@@ -10,7 +10,6 @@ import Museum from "./components/Museum";
 import Accordion from "./components/Accordion";
 import Footer from './components/Footer.js'
 
-
 function App() {
   const [wallet, setWallet] = useState(null);
   const [chain, setChain] = useState("");
@@ -176,14 +175,14 @@ function App() {
   }, [wallet, chain]);
   return (
     <div className="App">
-      <Header></Header>
-      <Banner></Banner>
-      <Carrousel></Carrousel>
-      <ConfigNft></ConfigNft>
-      <Exclusives></Exclusives>
-      <Museum></Museum>
-      <Accordion></Accordion>
-      <Footer></Footer>
+      <Header />
+      <Banner />
+      <Carrousel />
+      <ConfigNft />
+      <Exclusives />
+      <Museum />
+      <Accordion />
+      <Footer />
     </div>
   );
 }
