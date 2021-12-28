@@ -22,10 +22,10 @@ const Randomizador = () => {
     const randEye = Math.round(Math.random() * 10 + 1);
     let randHead = Math.round(Math.random() * 21 + 1);
 
-    randHead == 22 ? setBgCapucha(true) : setBgCapucha(false);
+    randHead === 22 ? setBgCapucha(true) : setBgCapucha(false);
     if (
-      (randType == 2 || randType == 3) &&
-      (randHead == 15 || randHead == 16 || randHead == 20 || randHead == 21)
+      (randType === 2 || randType === 3) &&
+      (randHead === 15 || randHead === 16 || randHead === 20 || randHead === 21)
     ) {
       randHead = Math.round(Math.random() * 21 + 1);
     }
@@ -66,16 +66,20 @@ const Randomizador = () => {
   }, [bg, clothe, type, moustache, eyes, head]);
 
   const setHeadrange = (e) => {
-    const value = e.target.value;
-    value == 22 ? setBgCapucha(true) : setBgCapucha(false);
-    if (type == 2 || type == 3) {
-      if (value == 15 || value == 16) {
-        setHead(14);
-      } else if (value == 20 || value == 21) {
+    const value = parseInt(e.target.value);
+
+    value === 22 ? setBgCapucha(true) : setBgCapucha(false);
+    setHead(value);
+    verifyPossible(value);
+  };
+
+  const verifyPossible = (value) => {
+    if (type === 2 || type === 3) {
+      if (value === 15 || value === 16) {
+        setHead(17);
+      } else if (value === 20 || value === 21) {
         setHead(19);
       }
-    } else {
-      setHead(value);
     }
   };
 
@@ -151,8 +155,9 @@ const Randomizador = () => {
               type="range"
               min="1"
               max="7"
+              step={0.01}
               value={bg}
-              onChange={(e) => setBg(e.target.value)}
+              onChange={(e) => setBg(parseInt(e.target.value))}
             />
           </li>
           <li>
@@ -162,7 +167,8 @@ const Randomizador = () => {
               min="1"
               max="4"
               value={type}
-              onChange={(e) => setType(e.target.value)}
+              step={0.01}
+              onChange={(e) => setType(parseInt(e.target.value))}
             />
           </li>
           <li>
@@ -182,7 +188,7 @@ const Randomizador = () => {
               min="1"
               max="7"
               value={moustache}
-              onChange={(e) => setMoustache(e.target.value)}
+              onChange={(e) => setMoustache(parseInt(e.target.value))}
             />
           </li>
           <li>
@@ -192,7 +198,7 @@ const Randomizador = () => {
               min="1"
               max="11"
               value={eyes}
-              onChange={(e) => setEyes(e.target.value)}
+              onChange={(e) => setEyes(parseInt(e.target.value))}
             />
           </li>
           <li>
@@ -203,7 +209,7 @@ const Randomizador = () => {
               max="14"
               name="bg"
               value={clothe}
-              onChange={(e) => setClothe(e.target.value)}
+              onChange={(e) => setClothe(parseInt(e.target.value))}
             />
           </li>
         </ul>
